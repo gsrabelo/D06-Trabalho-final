@@ -1,0 +1,13 @@
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+env-gen-ai/
+venv/
+venv-gen-ai/
+.DS_store
+__MACOSX/
+Thumbs.db
+*/video_teste.mov

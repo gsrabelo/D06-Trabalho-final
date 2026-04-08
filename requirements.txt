@@ -1,0 +1,16 @@
+cmake
+wheel
+Pillow 
+torch 
+torchvision 
+matplotlib 
+opencv-python 
+opencv-contrib-python 
+scipy 
+scikit-learn 
+scikit-image 
+timm 
+upyter 
+ipython 
+tqdm
+ultralytics
