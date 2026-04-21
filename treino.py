@@ -2,8 +2,8 @@ from ultralytics import YOLO
 from ultralytics import settings
 
 # Atualizar o diretório de runs
-settings.update({'runs_dir': 'C:\\00 IA\\D06 Trabalho final\\runs'})
-settings.update({'datasets_dir': 'C:\\00 IA\\D06 Trabalho final\\dataset'})
+#settings.update({'runs_dir': 'C:\\00 IA\\D06 Trabalho final\\runs'})
+#settings.update({'datasets_dir': 'C:\\00 IA\\D06 Trabalho final\\dataset'})
 print(settings)
 
 def print_metricas(model, particao):
@@ -35,7 +35,7 @@ if __name__ == '__main__':
 
     results_treino = yolo_custom.train(
         data=path_config_yaml,
-        epochs=200,
+        epochs=30,
         imgsz=640,
         batch=8,
         device='cpu',
