@@ -1,9 +1,13 @@
 from ultralytics import YOLO
 from ultralytics import settings
-from src.config import get_config
+from src.config import get_config, set_ultralytics_settings
 from src.print_metrics import print_metricas
 
 config = get_config()
+
+# RUN IF PATH ERROR IN ULTRALYTICS
+#set_ultralytics_settings()
+
 print(f'Ultralytics settings: {settings}')
 
 if __name__ == '__main__':

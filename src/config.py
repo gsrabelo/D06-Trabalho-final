@@ -49,7 +49,6 @@ def get_config():
         'my_model_path': MY_MODEL_PATH,
         'yolo_model_path': YOLO_MODEL_PATH
     }
-    set_ultralytics_settings()
     return config
 
 if __name__ == '__main__':

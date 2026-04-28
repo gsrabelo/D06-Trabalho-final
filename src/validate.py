@@ -1,8 +1,14 @@
 from ultralytics import YOLO
+from ultralytics import settings
 from src.print_metrics import print_metricas
 from src.config import get_config
 
 config = get_config()
+
+# RUN IF PATH ERROR IN ULTRALYTICS
+#set_ultralytics_settings()
+
+print(f'Ultralytics settings: {settings}')
 
 if __name__ == '__main__':
     #instancia modelo inicial
