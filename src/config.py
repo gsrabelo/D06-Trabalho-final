@@ -11,6 +11,9 @@ EPOCHS = 3
 BEST_MODEL_PATH = f'./runs/detect/{PROJECT}/{MODEL}/weights/best.pt'
 MY_MODEL_PATH = './models/best.pt'
 YOLO_MODEL_PATH = './models/yolov8n.pt'
+RUNS_DIR = 'C:\\00 IA\\D06-Trabalho-final\\runs'
+DATASETS_DIR = 'C:\\00 IA\\D06-Trabalho-final\\data\\dataset'
+WEIGHTS_DIR = 'C:\\00 IA\\D06-Trabalho-final\\weights'
 
 def set_device():
     if PLATFORM == "Windows":
@@ -30,9 +33,9 @@ def set_path_config_yaml():
 
 def set_ultralytics_settings():
     if PLATFORM == "Windows":
-        settings.update({'runs_dir': 'C:\\00 IA\\teste\\D06-Trabalho-final\\runs'})
-        settings.update({'datasets_dir': 'C:\\00 IA\\teste\\D06-Trabalho-final\\data\\dataset'})
-        settings.update({'weights_dir': 'C:\\00 IA\\teste\\D06-Trabalho-final\\weights'})
+        settings.update({'runs_dir': RUNS_DIR})
+        settings.update({'datasets_dir': DATASETS_DIR})
+        settings.update({'weights_dir': WEIGHTS_DIR})
 
 def get_config():
     config ={

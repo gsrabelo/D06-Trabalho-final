@@ -1,4 +1,4 @@
-path: C:\00 IA\teste\D06-Trabalho-final\data\dataset
+path: C:\00 IA\D06-Trabalho-final\data\dataset
 train: train/images
 val: val/images
 test: test/images
