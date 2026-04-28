@@ -1,4 +1,4 @@
-path: /Users/guilherme/00 IA/D06-Trabalho-final/dataset
+path: /Users/guilherme/00 IA/D06-Trabalho-final/data/dataset
 train: train/images
 val: val/images
 test: test/images
