@@ -6,7 +6,7 @@ PLATFORM = platform.system()
 PATH_CONFIG_YAML = 'config-win.yaml'
 PROJECT = "transfer_v1_ep30"
 MODEL = "yolo_transfer"
-EPOCHS = 3
+EPOCHS = 50
 BEST_MODEL_PATH = f'./runs/detect/{PROJECT}/{MODEL}/weights/best.pt'
 
 if PLATFORM == "Windows":
