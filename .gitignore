@@ -13,3 +13,4 @@ __MACOSX/
 Thumbs.db
 */video_teste.mov
 runs/detect/val*
+data/video/*
