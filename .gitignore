@@ -7,7 +7,9 @@ env/
 env-gen-ai/
 venv/
 venv-gen-ai/
+.venv/
 .DS_store
 __MACOSX/
 Thumbs.db
 */video_teste.mov
+runs/detect/val*

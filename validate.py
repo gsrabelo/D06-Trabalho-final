@@ -2,18 +2,22 @@ from ultralytics import YOLO
 from ultralytics import settings
 import platform
 
-# Atualizar o diretório de runs
-#settings.update({'runs_dir': 'C:\\00 IA\\D06 Trabalho final\\runs'})
-#settings.update({'datasets_dir': 'C:\\00 IA\\D06 Trabalho final\\dataset'})
-print(settings)
+projeto = "transfer_v1_ep30"
+nome_modelo = "yolo_transfer"
+best_model_path = f'./runs/detect/{projeto}/{nome_modelo}/weights/best.pt'
 
 if platform.system() == "Windows":
     print("Running on Windows")
-    DEVICE = "cpu"
+    path_config_yaml = 'config-win.yaml'
+    settings.update({'runs_dir': 'C:\\00 IA\\D06 Trabalho final\\runs'})
+    settings.update({'datasets_dir': 'C:\\00 IA\\D06 Trabalho final\\dataset'})
+    settings.update({'weights_dir': 'C:\\00 IA\\D06 Trabalho final\\weights'})
 
 if platform.system() == "Darwin":
     print("Running on macOS")
-    DEVICE = "mps"
+    path_config_yaml = 'config.yaml'
+
+print(f'Ultralytics settings: {settings}')
 
 def print_metricas(model, particao):
     if particao not in ('val', 'test'):
@@ -37,28 +41,6 @@ def print_metricas(model, particao):
 if __name__ == '__main__':
     #instancia modelo inicial
     yolo_custom = YOLO("yolov8n.pt")
-
-    projeto = "transfer_v1_ep30"
-    nome_modelo = "yolo_transfer"
-    path_config_yaml = 'config.yaml'
-
-    results_treino = yolo_custom.train(
-        data=path_config_yaml,
-        epochs=50,
-        imgsz=640,
-        batch=8,
-        device=DEVICE,
-        project=projeto,
-        name=nome_modelo,
-        exist_ok=True,
-        #patience=15,
-        plots=True,
-        amp=False,
-        verbose=False
-    )
-
-    best_model_path = f'./runs/detect/{projeto}/{nome_modelo}/weights/best.pt'
-    #instancia melhor modelo treinado
     yolo_best = YOLO(best_model_path)
 
     print_metricas(yolo_best, 'val')
