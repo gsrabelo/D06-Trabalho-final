@@ -48,7 +48,7 @@ PATH_CONFIG_YAML = 'config-win.yaml'
 PROJECT = "transfer_v1_ep30"
 MODEL = "yolo_transfer"
 EPOCHS = 3
-BEST_MODEL_PATH = f'../runs/detect/{PROJECT}/{MODEL}/weights/best.pt'
+BEST_MODEL_PATH = f'./runs/detect/{PROJECT}/{MODEL}/weights/best.pt'
 MY_MODEL_PATH = './models/best.pt'
 YOLO_MODEL_PATH = './models/yolov8n.pt'
 ```
