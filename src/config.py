@@ -1,5 +1,6 @@
 import platform
 from ultralytics import settings
+from pathlib import Path
 
 # Default parameters
 DEVICE = "cpu"
@@ -11,9 +12,10 @@ EPOCHS = 50
 BEST_MODEL_PATH = f'./runs/detect/{PROJECT}/{MODEL}/weights/best.pt'
 MY_MODEL_PATH = './models/best.pt'
 YOLO_MODEL_PATH = './models/yolov8n.pt'
-RUNS_DIR_WIN = 'C:\\00 IA\\D06-Trabalho-final\\runs'
-DATASETS_DIR_WIN = 'C:\\00 IA\\D06-Trabalho-final\\data\\dataset'
-WEIGHTS_DIR_WIN = 'C:\\00 IA\\D06-Trabalho-final\\weights'
+CWD = str(Path.cwd())
+RUNS_DIR_WIN = CWD + '\\runs'
+DATASETS_DIR_WIN = CWD + '\\data\\dataset'
+WEIGHTS_DIR_WIN = CWD + '\\weights'
 
 def set_device():
     if PLATFORM == "Windows":
@@ -54,3 +56,4 @@ def get_config():
 
 if __name__ == '__main__':
     print(f'Ultralytics settings: {settings}')
+    print(f'Pasta de trabalho: {CWD}')

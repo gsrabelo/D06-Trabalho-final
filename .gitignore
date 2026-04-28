@@ -11,6 +11,7 @@ venv-gen-ai/
 .DS_store
 __MACOSX/
 Thumbs.db
-*/video_teste.mov
+**/video_teste.mov
 runs/detect/val*
 data/video/*
+**/labels.cache

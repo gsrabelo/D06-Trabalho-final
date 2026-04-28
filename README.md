@@ -51,9 +51,10 @@ EPOCHS = 50
 BEST_MODEL_PATH = f'./runs/detect/{PROJECT}/{MODEL}/weights/best.pt'
 MY_MODEL_PATH = './models/best.pt'
 YOLO_MODEL_PATH = './models/yolov8n.pt'
-RUNS_DIR_WIN = '[Path absoluto]\\D06-Trabalho-final]\\runs'
-DATASETS_DIR_WIN = '[Path absoluto]\\D06-Trabalho-final\\data\\dataset'
-WEIGHTS_DIR_WIN = '[Path absoluto]\\D06-Trabalho-final\\weights'
+CWD = str(Path.cwd())
+RUNS_DIR_WIN = CWD + '\\runs'
+DATASETS_DIR_WIN = CWD + '\\data\\dataset'
+WEIGHTS_DIR_WIN = CWD + '\\weights'
 ```
 
 Atentar para o OS e tipo de dispositivo (cpu, gpu ou mps).
