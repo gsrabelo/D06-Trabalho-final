@@ -47,10 +47,13 @@ PLATFORM = platform.system()
 PATH_CONFIG_YAML = 'config-win.yaml'
 PROJECT = "transfer_v1_ep30"
 MODEL = "yolo_transfer"
-EPOCHS = 3
+EPOCHS = 50
 BEST_MODEL_PATH = f'./runs/detect/{PROJECT}/{MODEL}/weights/best.pt'
 MY_MODEL_PATH = './models/best.pt'
 YOLO_MODEL_PATH = './models/yolov8n.pt'
+RUNS_DIR_WIN = 'C:\\00 IA\\D06-Trabalho-final\\runs'
+DATASETS_DIR_WIN = 'C:\\00 IA\\D06-Trabalho-final\\data\\dataset'
+WEIGHTS_DIR_WIN = 'C:\\00 IA\\D06-Trabalho-final\\weights'
 ```
 
 Atentar para o OS e tipo de dispositivo (cpu, gpu ou mps).

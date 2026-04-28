@@ -7,13 +7,13 @@ PLATFORM = platform.system()
 PATH_CONFIG_YAML = 'config-win.yaml'
 PROJECT = "transfer_v1_ep30"
 MODEL = "yolo_transfer"
-EPOCHS = 3
+EPOCHS = 50
 BEST_MODEL_PATH = f'./runs/detect/{PROJECT}/{MODEL}/weights/best.pt'
 MY_MODEL_PATH = './models/best.pt'
 YOLO_MODEL_PATH = './models/yolov8n.pt'
-RUNS_DIR = 'C:\\00 IA\\D06-Trabalho-final\\runs'
-DATASETS_DIR = 'C:\\00 IA\\D06-Trabalho-final\\data\\dataset'
-WEIGHTS_DIR = 'C:\\00 IA\\D06-Trabalho-final\\weights'
+RUNS_DIR_WIN = 'C:\\00 IA\\D06-Trabalho-final\\runs'
+DATASETS_DIR_WIN = 'C:\\00 IA\\D06-Trabalho-final\\data\\dataset'
+WEIGHTS_DIR_WIN = 'C:\\00 IA\\D06-Trabalho-final\\weights'
 
 def set_device():
     if PLATFORM == "Windows":
@@ -33,9 +33,9 @@ def set_path_config_yaml():
 
 def set_ultralytics_settings():
     if PLATFORM == "Windows":
-        settings.update({'runs_dir': RUNS_DIR})
-        settings.update({'datasets_dir': DATASETS_DIR})
-        settings.update({'weights_dir': WEIGHTS_DIR})
+        settings.update({'runs_dir': RUNS_DIR_WIN})
+        settings.update({'datasets_dir': DATASETS_DIR_WIN})
+        settings.update({'weights_dir': WEIGHTS_DIR_WIN})
 
 def get_config():
     config ={
