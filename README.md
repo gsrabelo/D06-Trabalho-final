@@ -63,7 +63,7 @@ Execute o seguinte comando a partir da pasta raiz do projeto:
 
 `python -m src.config`
 
-As conifugrações do Ultralytics aparecerão no console. Confira se as pastas configuradas no Ultralytics correspondem às pastas do seu projeto. No Windows, pode ser que não estejam:
+As configurações do Ultralytics aparecerão no console. Confira se as pastas configuradas no Ultralytics correspondem às pastas do seu projeto. No Windows, é possível que não estejam:
 
 ```
 "datasets_dir": "[Path absoluto]\\D06-Trabalho-final\\data\\dataset",
@@ -71,7 +71,7 @@ As conifugrações do Ultralytics aparecerão no console. Confira se as pastas c
 "runs_dir": "[Path absoluto]\\D06-Trabalho-final\\runs",
 ```
 
-Caso esteja no Windows, configurar corretamente os caminhos das pastas no arquivo `config.py` e executar o comando: 
+Caso esteja no Windows, pode configurar os caminhos corretamente por meio do seguinte comando: 
 
 `python -c "import src.config; src.config.set_ultralytics_settings()"`
 
