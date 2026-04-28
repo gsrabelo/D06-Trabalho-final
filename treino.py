@@ -35,10 +35,10 @@ if __name__ == '__main__':
 
     results_treino = yolo_custom.train(
         data=path_config_yaml,
-        epochs=30,
+        epochs=50,
         imgsz=640,
         batch=8,
-        device='cpu',
+        device='mps',
         project=projeto,
         name=nome_modelo,
         exist_ok=True,

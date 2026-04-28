@@ -29,7 +29,7 @@ if __name__ == '__main__':
     # treino
     results_treino = yolo_custom.train(
         data=path_config_yaml,
-        epochs=1,
+        epochs=30,
         imgsz=640,
         batch=8,
         device='cpu',
