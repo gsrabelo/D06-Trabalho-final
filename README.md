@@ -51,23 +51,39 @@ EPOCHS = 50
 BEST_MODEL_PATH = f'./runs/detect/{PROJECT}/{MODEL}/weights/best.pt'
 MY_MODEL_PATH = './models/best.pt'
 YOLO_MODEL_PATH = './models/yolov8n.pt'
-RUNS_DIR_WIN = 'C:\\00 IA\\D06-Trabalho-final\\runs'
-DATASETS_DIR_WIN = 'C:\\00 IA\\D06-Trabalho-final\\data\\dataset'
-WEIGHTS_DIR_WIN = 'C:\\00 IA\\D06-Trabalho-final\\weights'
+RUNS_DIR_WIN = '[Path absoluto]\\D06-Trabalho-final]\\runs'
+DATASETS_DIR_WIN = '[Path absoluto]\\D06-Trabalho-final\\data\\dataset'
+WEIGHTS_DIR_WIN = '[Path absoluto]\\D06-Trabalho-final\\weights'
 ```
 
 Atentar para o OS e tipo de dispositivo (cpu, gpu ou mps).
 
+Execute o seguinte comando a partir da pasta raiz do projeto:
+
+`python -m src.config`
+
+As conifugrações do Ultralytics aparecerão no console. Confira se as pastas configuradas no Ultralytics correspondem às pastas do seu projeto. No Windows, pode ser que não estejam:
+
+```
+"datasets_dir": "[Path absoluto]\\D06-Trabalho-final\\data\\dataset",
+"weights_dir": "[Path absoluto]\\D06-Trabalho-final\\weights",
+"runs_dir": "[Path absoluto]\\D06-Trabalho-final\\runs",
+```
+
+Caso esteja no Windows, configurar corretamente os caminhos das pastas no arquivo `config.py` e executar o comando: 
+
+`python -c "import src.config; src.config.set_ultralytics_settings()"`
+
 ### 2. Conferindo o arquivo de configuração do YOLO
 
-Dois arquivos possíveis: um para WINDOWS (config-win.yaml) e outro para MAC (config-macos.yaml)
+Dois arquivos possíveis: um para WINDOWS (config-win.yaml) e outro para MAC (config-macos.yaml).
 
 Customizar o arquivo de configuração conforme o OS e a pasta do seu projeto.
 
 Exemplo:
 
 ```
-path: [Sua pasta de trabalho]/D06-Trabalho-final/data/dataset
+path: [Path absoluto]/D06-Trabalho-final/data/dataset
 train: train/images
 val: val/images
 test: test/images
@@ -78,7 +94,7 @@ names:
  1: Fuzil
 ```
 
-Atenção: não inverter a ordem das classes
+Atenção: não inverter a ordem das classes.
 
 ### 3. Caso queira treinar novamente o modelo
 
@@ -104,7 +120,7 @@ Conferir métricas nas pastas `runs/detect/val`
 
 Abrir o arquivo `notebooks/teste_modelo_custom.ipynb` e executar as células de código, observando as informações de saída.
 
-ATENÇÃO: A última célula depende de um arquivo de vídeo que não se encontra no github. Pegar arquivo manualmente e colocar na seguinte pasta e com o seguinte nome:  
+ATENÇÃO: A última célula depende de um arquivo de vídeo que não se encontra no github, por limitação de tamanho de arquivo. Pegar o arquivo manualmente (disponível na plataforma de aula) e colocar na seguinte pasta e com o seguinte nome:  
 
  `data/video/video_teste.mov` 
 

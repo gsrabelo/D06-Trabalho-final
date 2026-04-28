@@ -1,7 +1,7 @@
 from ultralytics import YOLO
 from ultralytics import settings
 from src.print_metrics import print_metricas
-from src.config import get_config
+from src.config import get_config, set_ultralytics_settings
 
 config = get_config()
 

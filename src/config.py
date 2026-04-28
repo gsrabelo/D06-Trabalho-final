@@ -36,6 +36,7 @@ def set_ultralytics_settings():
         settings.update({'runs_dir': RUNS_DIR_WIN})
         settings.update({'datasets_dir': DATASETS_DIR_WIN})
         settings.update({'weights_dir': WEIGHTS_DIR_WIN})
+        print(f'Ultralytics settings: {settings}')
 
 def get_config():
     config ={
