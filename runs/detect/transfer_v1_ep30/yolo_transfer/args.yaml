@@ -1,8 +1,8 @@
 task: detect
 mode: train
 model: ./models/yolov8n.pt
-data: config-win.yaml
-epochs: 3
+data: config-mac.yaml
+epochs: 50
 time: null
 patience: 100
 batch: 8
@@ -10,7 +10,7 @@ imgsz: 640
 save: true
 save_period: -1
 cache: false
-device: cpu
+device: mps
 workers: 8
 project: transfer_v1_ep30
 name: yolo_transfer
@@ -80,6 +80,7 @@ warmup_momentum: 0.8
 warmup_bias_lr: 0.1
 box: 7.5
 cls: 0.5
+cls_pw: 0.0
 dfl: 1.5
 pose: 12.0
 kobj: 1.0
@@ -106,4 +107,4 @@ auto_augment: randaugment
 erasing: 0.4
 cfg: null
 tracker: botsort.yaml
-save_dir: C:\00 IA\D06-Trabalho-final\runs\detect\transfer_v1_ep30\yolo_transfer
+save_dir: /Users/guilherme/00 IA/D06-Trabalho-final/runs/detect/transfer_v1_ep30/yolo_transfer

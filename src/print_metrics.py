@@ -1,11 +1,11 @@
 from ultralytics import YOLO
 
-def print_metricas(model, particao, path_config_yaml):
+def print_metricas(model, particao, path_config_yaml, device='cpu'):
     if particao not in ('val', 'test'):
         print('Partição inválida. Use "val" ou "test".')
         return
     
-    metricas = model.val(data=path_config_yaml, verbose=False, split=particao)
+    metricas = model.val(data=path_config_yaml, verbose=False, split=particao, device=device)
     print('\n\n------------------------------------')
     print('Métricas partição', particao)
     print('------------------------------------')
@@ -17,4 +17,11 @@ def print_metricas(model, particao, path_config_yaml):
     for i, cls_idx in enumerate(metricas.box.ap_class_index):
         nome = model.names[cls_idx]
         ap = metricas.box.ap50[i]
+        precision = metricas.box.p[i]
+        recall = metricas.box.r[i]
+        f1 = metricas.box.f1[i]
         print(f'  {int(cls_idx)} {nome:<15} AP@50 = {ap:.4f}')
+        print(f'  {int(cls_idx)} {nome:<15} Precision = {precision:.4f}')
+        print(f'  {int(cls_idx)} {nome:<15} Recall = {recall:.4f}')
+        print(f'  {int(cls_idx)} {nome:<15} F1 Score = {f1:.4f}')
+    print(60*'-')
